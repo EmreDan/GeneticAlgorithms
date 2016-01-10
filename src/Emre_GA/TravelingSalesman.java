@@ -27,15 +27,15 @@ public class TravelingSalesman {
         map=Initilize_Map();
         Initilize_Chromosomes(chromosomes);
         
-        Global_Optimum(chromosomes, map, 321, 330000);
+        Global_Optimum(chromosomes, map, 321, 33000); 
     }
     
-    private Integer[] Global_Optimum(Integer[][] chromosomes, Integer [][] map , int fitness_limit , int iter_limit){
+    private Integer[] Global_Optimum(Integer[][] chromosomes, Integer [][] map , int fitness_limit , int iteration_limit){
         
         Integer[] Best_Route = Get_Fittest(chromosomes, map);
         Integer i=0;
         int x;
-        while((x = Get_Fitness_Value(Best_Route, map) ) > fitness_limit && i < iter_limit ){
+        while((x = Get_Fitness_Value(Best_Route, map) ) > fitness_limit && i < iteration_limit ){
             Next_Generation(chromosomes, map);
             Integer [] Local_Optimum = Get_Fittest(chromosomes, map);
             if(Get_Fitness_Value(Local_Optimum, map) < x) {
