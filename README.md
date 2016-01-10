@@ -1,4 +1,4 @@
-# Genetic Algorithm Approach to Asymmetric Travelling Salesman Problem and Function Minimization.
+# Two different Genetic Algorithm Applications
 
 This project consists of 2 different Genetic Algorithms applications. 
 One for the Asymmetric Travelling Salesman Problem and the other is Function Minimization with binary values. 
