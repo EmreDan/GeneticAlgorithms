@@ -174,28 +174,28 @@ public class TravelingSalesman {
     }
     private Integer[][] Initilize_Map() {
         Integer[][] map={
-        {-1000,55,34,32,54,40,36,40,37,53},
-        {64,-1000,54,55,73,45,71,50,53,52},
-        {51,48,-1000,41,40,58,55,33,35,37},
-        {47,46,55,-1000,49,45,56,52,57,55},
-        {50,39,43,52,-1000,26,40,39,38,33},
-        {60,49,48,57,58,-1000,48,47,48,48},
-        {51,37,44,43,38,40,-1000,64,48,47},
-        {58,41,53,45,47,43,74,-1000,43,42},
-        {53,38,40,33,36,58,35,30,-1000,31},
-        {60,39,40,56,41,41,45,59,19,-1000}
+        {-1000, 55, 34, 32, 54, 40, 36, 40, 37, 53},
+        {64, -1000, 54, 55, 73, 45, 71, 50, 53, 52},
+        {51, 48, -1000, 41, 40, 58, 55, 33, 35, 37},
+        {47, 46, 55, -1000, 49, 45, 56, 52, 57, 55},
+        {50, 39, 43, 52, -1000, 26, 40, 39, 38, 33},
+        {60, 49, 48, 57, 58, -1000, 48, 47, 48, 48},
+        {51, 37, 44, 43, 38, 40, -1000, 64, 48, 47},
+        {58, 41, 53, 45, 47, 43, 74, -1000, 43, 42},
+        {53, 38, 40, 33, 36, 58, 35, 30, -1000, 31},
+        {60, 39, 40, 56, 41, 41, 45, 59, 19,-1000}
         };
         return map;
     }
 
     private Integer[][] Initilize_Chromosomes(Integer[][] chromosomes) {
         for (Integer[] chromosome : chromosomes) { 
-            Get_Unique_Value(chromosome);
+            Set_Unique_Values(chromosome);
         }
         return chromosomes;
     }
 
-    private void Get_Unique_Value(Integer[] chromosome) {
+    private void Set_Unique_Values(Integer[] chromosome) {
         Random rand = new Random();int data=-1;
         boolean flag;
         for (int i = 0; i < chromosome.length; i++) {   //for every gene
